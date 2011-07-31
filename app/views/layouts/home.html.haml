@@ -1,0 +1,71 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    - # This can be further customized here: http://developers.facebook.com/docs/reference/plugins/like/ -Anthony
+    %meta{:content => "Spring Fest MUN", :property => "og:title"}/
+    %meta{:content => "non_profit", :property => "og:type"}/
+    %meta{:content => "springfest", :property => "og:site_name"}/
+    %title
+      = "SpringFest MUN" 
+    = stylesheet_link_tag "slidertron", "style", "navigation_bar"
+    = javascript_include_tag "jquery", "application","rails" 
+    = csrf_meta_tag
+
+  %body
+    #wrapper
+      #menu
+        %ul
+          %li.current_page_item
+            %span 
+              = link_to "Home",home_index_path 
+          %li 
+            = link_to "About", "#"
+          %li 
+            = link_to "Gallery", "#"
+          %li 
+            = link_to "Awards", "#"
+          %li 
+            = link_to "Meet the Team", "#"
+          %li 
+            = link_to "From the Hall", from_the_hall_path 
+ 
+      .clr
+      #header
+        #logo
+          %h1
+            = link_to "M S Hall of Residence", "#"
+          .clr
+      .clr
+      #splash
+      #page
+        #page-bgtop
+          #page-bgbtm
+            #content
+              = yield  
+             
+               
+            #sidebar
+              %ul 
+                %li 
+                  %h2 More
+                  %ul
+                    %li
+                      = link_to "GC Chart", "#"
+                    %li
+                      = link_to "Hall Newsletter", "#"
+               
+            .clr             
+      #footer_wrapper     
+        #three-columns
+        #footer    
+        .clr                        
+      .clr              
+
+
+
+
+
+
+        
+
