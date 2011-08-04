@@ -1,7 +1,12 @@
 MShall::Application.routes.draw do
   
+  devise_for :admins
+
   match "/home/from_the_hall" => "home#from_the_hall" , :as => "from_the_hall"
   match "/home/index" => "home#index" , :as => "home_index"
+  match "/home/gc_chart" => "home#gc_chart" , :as => "gc_chart"
+  match "/home/admin" => "home#admin" , :as => "home_admin"
+  match "/home/posts" => "home#posts" , :as => "posts"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,7 +56,7 @@ MShall::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

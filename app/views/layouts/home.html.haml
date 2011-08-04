@@ -8,7 +8,7 @@
     %meta{:content => "springfest", :property => "og:site_name"}/
     %title
       = "SpringFest MUN" 
-    = stylesheet_link_tag "slidertron", "style", "navigation_bar"
+    = stylesheet_link_tag  "style" 
     = javascript_include_tag "jquery", "application","rails" 
     = csrf_meta_tag
 
@@ -16,13 +16,11 @@
     #wrapper
       #menu
         %ul
-          %li.current_page_item
-            %span 
-              = link_to "Home",home_index_path 
+          %li
+            = link_to "Home",home_index_path 
           %li 
-            = link_to "About", "#"
-          %li 
-            = link_to "Gallery", "#"
+            = link_to "Gallery", "https://picasaweb.google.com/ssm.mshall", :target => "_blank"
+  
           %li 
             = link_to "Awards", "#"
           %li 
@@ -51,9 +49,9 @@
                   %h2 More
                   %ul
                     %li
-                      = link_to "GC Chart", "#"
+                      = link_to "GC Chart", gc_chart_path 
                     %li
-                      = link_to "Hall Newsletter", "#"
+                      = link_to "Hall Newsletter", posts_path
                
             .clr             
       #footer_wrapper     
@@ -62,6 +60,11 @@
         .clr                        
       .clr              
 
+:javascript
+  $("#menu ul li").hover( function() { $(this).addClass("hilighted");});
+  $("#menu ul li").mouseout( function() { $(this).removeClass("hilighted");});
+
+  
 
 
 
