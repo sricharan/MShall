@@ -1,0 +1,14 @@
+#post
+  %h2.title
+    = link_to "Home", "#"
+    %br
+    %br
+  %div.entry
+    %p
+      = form_for @post do |f|
+         
+        = f.text_area :entry
+        %br
+        = f.submit
+ 
+

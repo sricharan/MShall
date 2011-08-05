@@ -1,0 +1,18 @@
+#post
+  %h2.title
+    = link_to "The Rising Kings", "#"
+    %br
+    %br
+  %div.entry
+    %p
+      - @posts.each do |post|
+        %p
+          %strong
+          = "--->"        
+          = raw (post.entry)
+        %br
+    %p
+      = link_to "Archives", "#"
+    %p
+      = link_to "Noticeboard", "#"
+ 
