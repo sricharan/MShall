@@ -9,6 +9,7 @@ gem 'mysql2', '<0.3.0'
 gem 'jquery-rails'
 gem 'haml'
 gem 'devise'
+gem 'net-dns'
 # Use unicorn as the web server
 # gem 'unicorn'
 
